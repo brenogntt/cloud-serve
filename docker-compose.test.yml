@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  serve:
+    build: . # it will tru to find an Dockerfile in the path '.' and build it
+  sut: #system under test
+    build: ./tests # it will tru to find an Dockerfile in the path './tests' and build it
+    depends_on:
+      - serve
